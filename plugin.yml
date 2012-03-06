@@ -1,0 +1,26 @@
+name: remotetnt
+main: com.github.mobsi09.remotetnt.remotetnt
+version: 0.1
+
+commands:
+   rtnt:
+      description: enables remotetnt for the player
+      usage: /<command>
+      permission: remotetnt.remote
+      permission-message: You don't have <permission>
+   rtntreload:
+      description: reloads the plugin
+      usage: /<command>
+      permission: remotetnt.reload
+      permission-message: You don't have <permission>
+
+permissions:
+   remotetnt.*:
+      description: Gives access to rtnt and rtntreload
+      children:
+        remotetnt.remote: true
+        remotetnt.reload: true
+   remotetnt.remote:
+      default: true
+   remotetnt.reload:
+      default: op
